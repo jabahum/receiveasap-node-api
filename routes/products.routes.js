@@ -8,7 +8,8 @@ const router = express.Router();
 
 
 //major routes of create and get
-router.route('/').get(protect,authorize('developer'),getProducts).post(protect,createProduct);
+router.route('/').get(getProducts).post(createProduct);
+//router.route('/').get(protect,authorize('developer'),getProducts).post(protect,createProduct);
 
 //functional alerts of getone, update and delete
 router.route('/:id').get(protect,getProduct).put(protect,updateProduct).delete(protect,authorize('jabahum'),deleteProduct);

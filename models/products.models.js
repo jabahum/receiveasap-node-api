@@ -2,14 +2,34 @@
 const mongoose = require('mongoose');
 const errorResponse = require('../utils/errorResponse');
 
-const ProductSchema = new mongoose.Schema({});
+const ProductSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: [true, "product name cannot be empty"],
+        unique: [true, " product name not available"]
+    },
+    quantity: Number,
+    price: Number,
+    unitOfMeasure: String,
+    supplierName: String,
+    description: String,
+    imageUrl: String,
+    stock: Number,
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    },
+    updatedAt: {
+        type: Date,
+    }
+});
 
 
 //handle before saving to DB
-ProductSchema.pre('save', function(next){
-    if(this.name === "Other"){
+ProductSchema.pre('save', function (next) {
+    if (this.name === "Other") {
         //other.required = [true,"Please specify the 'Other' alert type"];
-        if(!this.other){
+        if (!this.other) {
             return next(new errorResponse(`Please specify the Other type of alert`, 400));
         }
         return next();
@@ -17,4 +37,4 @@ ProductSchema.pre('save', function(next){
     next();
 });
 
-module.exports = mongoose.model('Product', ProductSchema); 
+module.exports = mongoose.model('Product', ProductSchema);

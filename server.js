@@ -46,7 +46,7 @@ app.use('/api/v1/products',products);
 //initiate error handler
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5080;
 
 const server = app.listen(
     PORT, console.log(`🚀Server running in ${process.env.NODE_ENV} mode on Port ${PORT}`)
