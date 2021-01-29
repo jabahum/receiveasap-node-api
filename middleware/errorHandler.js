@@ -9,13 +9,13 @@ const errorHandler = (err,req,res,next) =>{
 
     //Mongoose bad ObjectId Handler
     if(err.name === "CastError"){
-        const message = `Alert with ID ${err.value} not found!`;
+        const message = `Product with ID ${err.value} not found!`;
         error = new ErrorResponse(message,404); 
     };
 
     //Mangoose duplicate Error
     if(err.code === 11000){
-        const message = `Username or email already in use`;
+        const message = `Duplication product`;
         error = new ErrorResponse(message,400); 
     };
 

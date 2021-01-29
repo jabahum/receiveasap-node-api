@@ -3,11 +3,7 @@ const mongoose = require('mongoose');
 const errorResponse = require('../utils/errorResponse');
 
 const ProductSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: [true, "product name cannot be empty"],
-        unique: [true, " product name not available"]
-    },
+    name: String,
     quantity: Number,
     price: Number,
     unitOfMeasure: String,

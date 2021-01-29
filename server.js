@@ -17,7 +17,7 @@ const cookieParser = require('cookie-parser');
 const auth = require('./routes/auth.routes');
 const products = require('./routes/products.routes');
 
-//const { populate } = require('./models/Alert');
+const { populate } = require('./models/products.models');
 
 //load env varriables
 dotenv.config({path:'./config/config.env'});
