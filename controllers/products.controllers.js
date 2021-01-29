@@ -67,7 +67,7 @@ exports.getProducts = asyncHandler(async(req,res,next) => {
 
     res.status(200).json({
         success : true, 
-        count : alert.length,
+        count : product.length,
         pagination,
         data : product
     }); 
