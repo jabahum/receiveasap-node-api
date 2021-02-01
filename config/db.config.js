@@ -15,13 +15,5 @@ module.exports = {
     //Used by the Kumusoft Online test platform (https://efris.kumusoft.com)
     mongo_atlas: {
         connection_string: 'mongodb+srv://receiveasap:0703336660@cluster0.wtqkx.mongodb.net/test',
-        params: {
-            user: "receiveasap",
-            pass: "0703336660",
-            dbName: "test",
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true
-        }
     }
 }
