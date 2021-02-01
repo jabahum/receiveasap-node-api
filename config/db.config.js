@@ -14,10 +14,10 @@ module.exports = {
     //Connection to Mongo Atlas
     //Used by the Kumusoft Online test platform (https://efris.kumusoft.com)
     mongo_atlas: {
-        connection_string: 'mongodb+srv://8TqUsCjbjPNbja8@test.oamsg.gcp.mongodb.net/test?retryWrites=true&w=majority',
+        connection_string: 'mongodb+srv://receiveasap:0703336660@cluster0.wtqkx.mongodb.net/test',
         params: {
-            user: "test",
-            pass: "8TqUsCjbjPNbja8",
+            user: "receiveasap",
+            pass: "0703336660",
             dbName: "test",
             useNewUrlParser: true,
             useUnifiedTopology: true,
