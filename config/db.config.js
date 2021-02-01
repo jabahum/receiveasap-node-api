@@ -1,6 +1,6 @@
 //Connection string for the database
 //Used in Docker containers and development environments
-const database_connection_string = process.env.KAKASADBURLLOCAL || "mongodb://localhost:27017/efris_middleware" ;
+const database_connection_string = process.env.KAKASADBURLLOCAL || "mongodb://localhost:27017/receiveasap_api" ;
 module.exports = {
 
     development: {
@@ -14,11 +14,11 @@ module.exports = {
     //Connection to Mongo Atlas
     //Used by the Kumusoft Online test platform (https://efris.kumusoft.com)
     mongo_atlas: {
-        connection_string: 'mongodb+srv://kakasa:Kax3fr1s23@maintestdb.cqitf.gcp.mongodb.net/?authSource=admin&readPreference=primary',
+        connection_string: 'mongodb+srv://admin:test@test.oamsg.gcp.mongodb.net/test?retryWrites=true&w=majority',
         params: {
-            user: "kakasa",
-            pass: "Kax3fr1s23",
-            dbName: "efris_middleware",
+            user: "admin",
+            pass: "jaba@hum",
+            dbName: "test",
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true
