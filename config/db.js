@@ -5,9 +5,6 @@ let dbconfig = require('../config/db.config');
 const connectDB = async () => {
     var conn = process.env.DBSTORE == "ATLAS" ? dbconfig.mongo_atlas : dbconfig.development;
         mongoose.connect(conn.connection_string, {
-                user: conn.params.user,
-                pass: conn.params.pass,
-                dbName: conn.params.dbName,
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
                 useCreateIndex: true,
