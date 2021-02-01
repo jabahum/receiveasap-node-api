@@ -3,14 +3,14 @@ const mongoose = require('mongoose');
 //mongodb+srv://admin:<password>@test.oamsg.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority
 const connectDB = async () => {
     const conn = await mongoose.connect(process.env.MONGO_URI, {
-        development: {
-            connection_string:"mongodb://localhost:27017/receiveasap_api",
-            params: {
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-                useCreateIndex: true
-            }
-        },
+        // development: {
+        //     connection_string:"mongodb://localhost:27017/receiveasap_api",
+        //     params: {
+        //         useNewUrlParser: true,
+        //         useUnifiedTopology: true,
+        //         useCreateIndex: true
+        //     }
+        // },
         //Connection to Mongo Atlas
         //Used by the Kumusoft Online test platform (https://efris.kumusoft.com)
         mongo_atlas: {
