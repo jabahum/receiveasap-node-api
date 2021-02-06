@@ -8,6 +8,11 @@ const UserSchema = new mongoose.Schema({
         required : [true, "Username cannot be empty"],
         unique : [true,"Username not available"]
     },
+    number:{
+        type : String,
+        required : [true, "Mobile Number  cannot be empty"],
+        unique : [true,"Mobile Number not available"]
+    },
     email : {
         type : String,
         required : true,

@@ -7,7 +7,7 @@ const ErrorResponse = require('../utils/errorResponse');
 //@route  POST /api/v1/auth
 //@access Public
 exports.createUser = asyncHandler(async(req,res,next) => {
-    const { name, email, password} = req.body;
+    const { name,number,email,password} = req.body;
 
     const user = await User.create(req.body);
     console.log("Server_response",user);
