@@ -16,6 +16,7 @@ const cookieParser = require('cookie-parser');
 //const alerts = require('./routes/alerts');
 const auth = require('./routes/auth.routes');
 const products = require('./routes/products.routes');
+const categorys = require('./routes/categories.routes');
 
 const { populate } = require('./models/products.models');
 
@@ -42,6 +43,7 @@ app.use(logger);
 //app.use('/api/v1/alerts', alerts);
 app.use('/api/v1/auth', auth);
 app.use('/api/v1/products',products);
+app.use('/api/v1/categorys',categorys);
 
 //initiate error handler
 app.use(errorHandler);

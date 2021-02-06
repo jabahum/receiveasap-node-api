@@ -5,6 +5,7 @@ const errorResponse = require('../utils/errorResponse');
 const ProductSchema = new mongoose.Schema({
     name: String,
     quantity: Number,
+    categoryId:String,
     price: Number,
     unitOfMeasure: String,
     supplierName: String,

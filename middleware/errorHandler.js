@@ -15,7 +15,7 @@ const errorHandler = (err,req,res,next) =>{
 
     //Mangoose duplicate Error
     if(err.code === 11000){
-        const message = `Duplication product`;
+        const message = `Duplication`;
         error = new ErrorResponse(message,400); 
     };
 
