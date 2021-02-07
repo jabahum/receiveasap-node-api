@@ -12,6 +12,6 @@ router.route('/').post(createUser);
 
 router.route('/login').post(loginUser);
 
-router.route('/me').get(protect,getMe);
+router.route('/me').get(getMe);
 
 module.exports = router;

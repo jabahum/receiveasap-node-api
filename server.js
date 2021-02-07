@@ -18,6 +18,9 @@ const auth = require('./routes/auth.routes');
 const products = require('./routes/products.routes');
 const categorys = require('./routes/categories.routes');
 const banners = require('./routes/banner.routes');
+const orders = require('./routes/orders.routes');
+const favorites = require('./routes/favorites.routes');
+const carts = require('./routes/cart.routes');
 
 const { populate } = require('./models/products.models');
 
@@ -46,6 +49,9 @@ app.use('/api/v1/auth', auth);
 app.use('/api/v1/products',products);
 app.use('/api/v1/categorys',categorys);
 app.use('/api/v1/banners',banners);
+app.use('/api/v1/orders',orders);
+app.use('/api/v1/favorites',favorites);
+app.use('/api/v1/carts',carts);
 
 //initiate error handler
 app.use(errorHandler);
