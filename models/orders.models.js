@@ -3,7 +3,9 @@ const mongoose = require('mongoose');
 const errorResponse = require('../utils/errorResponse');
 
 const OrderSchema = new mongoose.Schema({
-   
+    cartId:String,
+    productId:String,
+    status:Boolean,
     createdAt: {
         type: Date,
         default: Date.now,
